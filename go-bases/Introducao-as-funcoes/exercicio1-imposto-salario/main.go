@@ -12,18 +12,19 @@ func main() {
 
 func impostoSalario(salario float64) (deducao float64) {
 	var deducaoPercentual float64
+
 	if salario >= 50000.0 && salario <= 149999.0 {
-		deducaoPercentual = 17
+		deducaoPercentual = 0.17
 	} else if salario >= 150000.0 {
-		deducaoPercentual = 27
+		deducaoPercentual = 0.27
 	} else {
-		deducaoPercentual = 10
+		deducaoPercentual = 0.10
 	}
 
-	deducao = (salario * deducaoPercentual) / 100.00
+	deducao = salario * deducaoPercentual
 	salarioDeduzido := salario - deducao
 
-	fmt.Printf("Valor incial do salário: %.2f \n A dedução foi de %.0f%% \n O valor deduzido foi: %.2f \n O salário atual é de: %.2f", salario, deducaoPercentual, deducao, salarioDeduzido)
+	fmt.Printf("Valor incial do salário: %.2f \n A dedução foi de %.0f%% \n O valor deduzido foi: %.2f \n O salário atual é de: %.2f", salario, deducaoPercentual*100, deducao, salarioDeduzido)
 
 	return
 }
