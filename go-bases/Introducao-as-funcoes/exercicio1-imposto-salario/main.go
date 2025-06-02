@@ -13,7 +13,7 @@ func main() {
 func impostoSalario(salario float64) (deducao float64) {
 	var deducaoPercentual float64
 
-	if salario >= 50000.0 && salario <= 149999.0 {
+	if salario >= 50000.0 && salario < 150000.0 {
 		deducaoPercentual = 0.17
 	} else if salario >= 150000.0 {
 		deducaoPercentual = 0.27

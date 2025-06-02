@@ -5,7 +5,7 @@ import (
 )
 
 func TestCalcularImposto_AcimaDe50000(t *testing.T) {
-	salario := 100000.0
+	salario := 149999.3
 	esperado := salario * 0.17 // 17%
 	resultado := impostoSalario(salario)
 	if resultado != esperado {
